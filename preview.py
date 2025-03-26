@@ -38,7 +38,7 @@ def pipe_archive(images):
 
 def read_binary(filename):
     """
-    Read processed Olivetti faces from disk
+    Read binary Olivetti faces from disk
     """
     with open(filename, "rb") as file:
         binary_data = file.read()
