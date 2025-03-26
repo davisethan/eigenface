@@ -7,7 +7,7 @@ def preview(images):
     """
     Preview Olivetti faces
     """
-    _, axes = plt.subplots(2, 5, figsize=(10, 5))
+    _, axes = plt.subplots(2, 5, figsize=(10, 4))
     for i, ax in enumerate(axes.flat):
         ax.imshow(images[i], cmap="gray")
         ax.axis("off")
@@ -15,7 +15,7 @@ def preview(images):
     plt.show()
 
 
-def read_input():
+def read_archive():
     """
     Read random 10 Olivetti faces from archive
     """
@@ -25,7 +25,7 @@ def read_input():
     return images[indexes]
 
 
-def write_input(images):
+def pipe_archive(images):
     """
     Write preprocessed Olivetti faces to disk
     """
@@ -36,7 +36,7 @@ def write_input(images):
         file.write(binary)
 
 
-def read_output(filename):
+def read_binary(filename):
     """
     Read processed Olivetti faces from disk
     """
@@ -47,15 +47,15 @@ def read_output(filename):
     return images
 
 
-# input = read_input()
-# preview(input)
-# write_input(input)
+# images = read_archive()
+# preview(images)
+# pipe_archive(images)
 
-# outputEvdPm = read_output("outputEvdPm.bin")
+# outputEvdPm = read_binary("outputEvdPm.bin")
 # preview(outputEvdPm)
-# outputSvdPm = read_output("outputSvdPm.bin")
+# outputSvdPm = read_binary("outputSvdPm.bin")
 # preview(outputSvdPm)
-# outputEvdQrm = read_output("outputEvdQrm.bin")
+# outputEvdQrm = read_binary("outputEvdQrm.bin")
 # preview(outputEvdQrm)
-# outputSvdQrm = read_output("outputSvdQrm.bin")
+# outputSvdQrm = read_binary("outputSvdQrm.bin")
 # preview(outputSvdQrm)
