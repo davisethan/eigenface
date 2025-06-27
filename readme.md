@@ -1,5 +1,9 @@
 # eigenface
 
+## white paper
+
+https://github.com/davisethan/eigenface/blob/main/Linear_Algebra_for_Image_Compression.pdf
+
 ## installation
 
 ```bash
